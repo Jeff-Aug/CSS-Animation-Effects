@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(29, 17, 17);
+}
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .ring{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -30px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid #d43a0b;
+    animation: animate 4s linear infinite;
+    
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
+
+.container .ring::before{
+    content: '';
+    position: absolute;
+    border-radius: 50% ;
+    top: 12px;
+    right: 12px;
+    width: 15px;
+    height: 15px;
+    background-color: #d43a0b;
+    box-shadow: 0 0 0 5px #d43a0b55,
+    0 0 0 10px #d43a0b44,
+    0 0 0 15px #d43a0b33,
+    0 0 0 20px #d43a0b22;
+}
+
+.container .ring:nth-child(2){
+    animation: animate2 4s linear infinite;
+    animation-delay: -1s;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #df1cab;
+}
+
+.container .ring:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top: initial;
+    border-radius: 50% ;
+    bottom: 12px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    background-color: #df1cab;
+    box-shadow: 0 0 0 5px #df1cab55,
+    0 0 0 10px #df1cab44,
+    0 0 0 15px #df1cab33,
+    0 0 0 20px #df1cab22;
+}
+@keyframes animate2 {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        
+    }
+}
+
+
+.container .ring:nth-child(3){
+    animation: animate3 4s linear infinite;
+    animation-delay: -3s;
+    position: absolute;
+    top: -66.66px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #0ecff1;
+}
+.container .ring:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    top: initial;
+    border-radius: 50% ;
+    bottom: 12px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    background-color: #0ecff1;
+    box-shadow: 0 0 0 5px #0ecff155,
+    0 0 0 10px #0ecff144,
+    0 0 0 15px #0ecff133,
+    0 0 0 20px #0ecff122;
+}
+@keyframes animate3 {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        
+    }
+}
+
+
+.container p{
+    position: absolute;
+    color: #FFF;
+    font-size: 1.4rem;
+    font-family: consolas;
+    bottom: -80px;
+    letter-spacing: 0.15rem;
+}
+
+
